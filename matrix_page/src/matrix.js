@@ -1,7 +1,15 @@
 // Matrix rain effect
+let animationInterval = null;
+
 export function initMatrixRain() {
     const canvas = document.querySelector('.matrix-rain');
     if (!canvas) return;
+
+    // Clear any existing animation interval
+    if (animationInterval) {
+        clearInterval(animationInterval);
+        animationInterval = null;
+    }
 
     const ctx = canvas.getContext('2d');
 
@@ -35,12 +43,18 @@ export function initMatrixRain() {
         }
     }
 
-    setInterval(drawMatrix, 33);
+    // Start the animation
+    animationInterval = setInterval(drawMatrix, 33);
 
-    window.addEventListener('resize', () => {
+    // Handle window resize
+    function handleResize() {
         resizeCanvas();
         columns = Math.floor(canvas.width / fontSize);
         drops = Array(columns).fill(1);
-    });
+    }
+
+    // Remove old resize listener if exists, then add new one
+    window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 }
 
