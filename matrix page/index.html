@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Choice</title>
+</head>
+<body>
+    <canvas class="matrix-rain"></canvas>
+
+    <div class="background-image"></div>
+    
+    <div class="container">
+        <div class="choice-screen" id="choiceScreen">
+            <h1>THE CHOICE IS YOURS</h1>
+            <p class="quote">"You're here because you sense something. What you know you can't explain, but you feel it.
+                The <span style="color: #0066ff; font-weight: bold; text-shadow: none;">Blue Pill</span> returns you safely home—a brief glimpse of my abilities, nothing more.
+                The <span style="color: #ff0000; font-weight: bold; text-shadow: none;">Red Pill?</span> I show you the full extent of what I've created. But remember—all I'm offering is the truth. Nothing more.."</p>
+            
+            <div class="pills-container">
+                <div>
+                    <div class="pill blue-pill" onclick="choosePill('blue')"></div>
+                    <div class="pill-label" style="color: #0066ff;">BLUE PILL</div>
+                </div>
+                <div>
+                    <div class="pill red-pill" onclick="choosePill('red')"></div>
+                    <div class="pill-label" style="color: #ff0000;">RED PILL</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outcome-screen red-outcome" id="redOutcome">
+            <h2>WELCOME TO THE REAL WORLD</h2>
+            <p>You've chosen to see how deep the rabbit hole goes.</p>
+            <p>The truth can be painful, but you've decided that knowing is better than living in ignorance.</p>
+            <p>The Matrix has you no longer.</p>
+            <button class="back-button" onclick="goBack()">TAKE ANOTHER CHOICE</button>
+        </div>
+
+        <div class="outcome-screen blue-outcome" id="blueOutcome">
+            <h2>BACK TO SLEEP</h2>
+            <p>You wake up in your bed and believe whatever you want to believe.</p>
+            <p>Sometimes ignorance is bliss. The comfortable lie continues.</p>
+            <p>The story ends, you return to your life.</p>
+            <button class="back-button" onclick="goBack()">RECONSIDER YOUR CHOICE</button>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
