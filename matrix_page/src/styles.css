@@ -42,7 +42,7 @@ h1 {
 .pills-container {
     padding-top: 120px;
     display: flex;
-    gap: 300px;
+    gap: 330px;
     justify-content: center;
     align-items: center;
 }
@@ -67,25 +67,25 @@ h1 {
 
 .red-pill {
     border: 1px solid #000;
-    transform: rotate(-80deg);
+    transform: rotate(-85deg);
     background: linear-gradient(145deg, #ff0000, #cc0000);
     box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
 }
 
 .red-pill:hover {
-    transform: scale(1.2) rotate(-80deg);
+    transform: scale(1.2) rotate(-85deg);
     box-shadow: 0 15px 50px rgba(255, 0, 0, 0.8);
 }
 
 .blue-pill {
-    border: 1px solid #000;
-    transform: rotate(80deg);
+    border: 1px solid hsl(0, 0%, 0%);
+    transform: rotate(85deg);
     background: linear-gradient(145deg, #0066ff, #0044cc);
     box-shadow: 0 10px 30px rgba(0, 102, 255, 0.5);
 }
 
 .blue-pill:hover {
-    transform: scale(1.2) rotate(80deg);
+    transform: scale(1.2) rotate(85deg);
     box-shadow: 0 15px 50px rgba(0, 102, 255, 0.8);
 }
 
